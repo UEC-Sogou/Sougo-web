@@ -7,21 +7,99 @@
     <title>UEC 総合型入学生 情報発信サイト</title>
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
+
 <body>
     <header>
         <p class="headerLogo">UEC 総合型入学生 情報発信サイト</p>
         <nav>
             <ul class="nav-menu">
-                <li><a href="index.html"><p>ホーム</p></a></li>
-                <li><a href="about.html"><p>入試情報</p></a></li>
-                <li><a href="about.html"><p>Q＆A</p></a></li>
-                <li><a href="services.html"><p>ブログ</p></a></li>
-                <li><a href="contact.html"><p>お問い合わせ</p></a></li>
+                <li><a href="index.html">
+                        <p>ホーム</p>
+                    </a></li>
+                <li><a href="about.html">
+                        <p>入試情報</p>
+                    </a></li>
+                <li><a href="about.html">
+                        <p>Q＆A</p>
+                    </a></li>
+                <li><a href="services.html">
+                        <p>ブログ</p>
+                    </a></li>
+                <li><a href="contact.html">
+                        <p>お問い合わせ</p>
+                    </a></li>
             </ul>
         </nav>
     </header>
     <hr class="headerUnderLine">
-    <img class="homeImg" src="assets/images/homeHead.jpg">
+    <div class="homeImg">
+        <img src="assets/images/homeHead.jpg">
+        <div class="onImgAbout">
+            <div>
+                <p class="AboutTileTitle">このサイトについて</p>
+                <hr class="AboutTileLine">
+                <p class="AboutTileDetail" style="color: #ff0000;">このサイトは総合型選抜で電気通信大学に入学した学生が運営するサイトです。入試関係の情報などは必ず電気通信大学の公式ホームページをご確認ください。</p>
+                <p class="AboutTileDetail">公式ホームページは➔<a href="https://www.uec.ac.jp/">こちら</a></p>
+            </div>
+            <div>
+                <p class="AboutTileDetail">
+                    このサイトでは、総合型選抜についてのFAQや、入学した先輩方についてのブログなどを通して、総合型選抜についての情報提供や、実際に先輩方がどのような対策をして試験に臨んだかなどを共有していく予定です。
+                </p>
+            </div>
+        </div>
+    </div>
+    <div class="homeMain">
+        <div class="mainBlock">
+            <h1>お知らせ</h1>
+            <div id="news-list">
+                <script>
+                    fetch('assets/json/news.json')
+                    .then(response => response.json())
+                    .then(data => { const newsList = document.getElementById('news-list');
+                    const displayCount = Math.min(data.length, 5);
+                    for (let i = 0; i < displayCount; i++) {
+                        const newsItem = data[i];
+                        const newsDiv = document.createElement('div');
+                        newsDiv.innerHTML = `
+                        <a href="${newsItem.url}"><h3>${newsItem.title}(${newsItem.day})</h3></a>
+                        `;
+                        newsList.appendChild(newsDiv);
+                    } })
+                    .catch(error => console.error('Error:', error));
+                </script>
+            </div>
+            <h1>入試概要</h1>
+            <p>電気通信大学の総合型選抜は共通テスト+個別試験で行われる国立大学前期入試と異なり、例年、志望理由書や活動実績報告書などを提出する「第一次選考」と、プレゼンテーションなど面接試験を行う「第二次選考」で構成されています。 </p>
+            <p style="color: #ff0000;">受験をご検討の方は必ず最新の募集要項をご確認ください。</p>
+            <h1>総合型選抜について知ろう！</h1>
+            <a href="">
+                <div class="linkPop">
+                    <p class="linkPopTitle">➔総合型選抜とは</p>
+                    <p class="linkPopDetail">2025年度募集要項をもとに紹介します</p>
+                </div>
+            </a>
+            <a href="">
+                <div class="linkPop">
+                    <p class="linkPopTitle">➔FAQで気になることを確認しよう</p>
+                    <p class="linkPopDetail">よくいただくご質問を掲載しています</p>
+                </div>
+            </a>
+            <a href="">
+                <div class="linkPop">
+                    <p class="linkPopTitle">➔ブログで先輩方の受験エピソードを知ろう</p>
+                    <p class="linkPopDetail">先輩方にインタビューしてブログを作っています</p>
+                </div>
+            </a>
+            <a href="">
+                <div class="linkPop">
+                    <p class="linkPopTitle">➔わからないことを質問しよう</p>
+                    <p class="linkPopDetail">随時質問を受け付け、解答しています</p>
+                </div>
+            </a>
+            <h1>最新のブログ</h1>
+            <h1>お問い合わせ先</h1>
+        </div>
+    </div>
 </body>
 
 </html>
