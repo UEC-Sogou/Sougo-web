@@ -1,8 +1,8 @@
 .headerLogo {
     font-size: 1.2vw;
     margin-left: 1vw;
-    margin-bottom: 1vw;
-    margin-top: 1vw;
+    margin-bottom: 0.7vw;
+    margin-top: 0.7vw;
 }
 
 body {
@@ -48,7 +48,7 @@ header {
 
 .nav-menu p {
     padding: 0;
-    margin-top: 1vw;
+    margin-top: 0.7vw;
     margin-bottom: 0;
 }
 
@@ -146,7 +146,7 @@ header {
 
 .linkPop {
     background-color: #eeffcc;
-    border: 2px solid #009900;
+    border: 0.2vw solid #009900;
     border-radius: 1vw;
     margin-bottom: 0.1vw;
 }
