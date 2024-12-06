@@ -1,8 +1,8 @@
 .headerLogo {
     font-size: 1.2vw;
-    margin-left: 10px;
-    margin-bottom: 10px;
-    margin-top: 10px;
+    margin-left: 1vw;
+    margin-bottom: 1vw;
+    margin-top: 1vw;
 }
 
 body {
@@ -14,7 +14,7 @@ body {
 header {
     background-color: #333;
     color: white;
-    padding: 0px 0;
+    padding: 0;
     text-align: center;
     display: flex;
     justify-content: space-between;
@@ -36,8 +36,8 @@ header {
 }
 
 .nav-menu li {
-    margin-left: 20px;
-    margin-right: 20px;
+    margin-left: 2vw;
+    margin-right: 2vw;
 }
 
 .nav-menu a {
@@ -48,7 +48,7 @@ header {
 
 .nav-menu p {
     padding: 0;
-    margin-top: 10px;
+    margin-top: 1vw;
     margin-bottom: 0;
 }
 
