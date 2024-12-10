@@ -127,7 +127,7 @@ header {
     padding-left: 1vw;
 }
 
-#news-list h3{
+#news-list h3 {
     color: #000000;
     text-decoration: underline;
     text-decoration-color: #000000;
@@ -135,7 +135,7 @@ header {
     margin: 0;
 }
 
-.mainBlock p {
+.mainBlock .detailText {
     font-size: 1.1vw;
 }
 
@@ -156,11 +156,11 @@ header {
     width: 5vw;
 }
 
-.mainBlock a{
+.mainBlock a {
     text-decoration: none;
 }
 
-.linkPop .linkPopTitle{
+.linkPop .linkPopTitle {
     color: #000000;
     margin: 0 0 0 10px;
     font-size: 1.5vw;
@@ -170,7 +170,7 @@ header {
     padding: 0.2vw;
 }
 
-.linkPop .linkPopDetail{
+.linkPop .linkPopDetail {
     margin: 0 0 0 20px;
     color: #999999;
     font-size: 1.1vw;
@@ -183,8 +183,71 @@ header {
     border-radius: 1vw;
 }
 
-.snsButton p{
+.snsButton p {
     margin: 0;
     padding: 0.5vw;
 }
 
+.pageTopImg {
+    position: relative;
+}
+
+.pageTopImg img {
+    width: 100%;
+    height: 10vw;
+    object-fit: cover;
+    filter: brightness(50%);
+}
+
+.TopImageOnText {
+    position: absolute;
+    top: 0vw;
+    margin: 0 30vw auto 2vw;
+    display: flex;
+}
+
+.TopImageOnText p {
+    color: #77bb00;
+    font-weight: 1000;
+    font-size: 7vw;
+    margin: 0;
+    padding: 0;
+}
+
+.TopImageOnText h1 {
+    margin: auto 0 2vw 1vw;
+    color: #77bb00;
+    font-size: 2vw;
+    font-weight: 900;
+    padding: 0;
+}
+
+.faqQuestion::before {
+    content: "Q. ";
+    font-weight: bold;
+    color: red;
+    font-size: 2.5vw;
+    padding-left: 1vw;
+}
+
+.faqQuestion {
+    font-size: 1.5vw;
+    background-color: #44aaff;
+    color: #ffffff;
+    border-radius: 1vw;
+    font-weight: 600;
+    margin-bottom: 0;
+}
+
+.faqAnswer::before {
+    content: "A. ";
+    font-weight: bold;
+    color: #009900;
+    font-size: 2vw;
+    padding-left: 1vw;
+}
+
+.faqAnswer {
+    font-size: 1.2vw;
+    margin-top: 1vw;
+}
