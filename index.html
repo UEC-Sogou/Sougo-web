@@ -38,7 +38,8 @@
             <div>
                 <p class="AboutTileTitle">このサイトについて</p>
                 <hr class="AboutTileLine">
-                <p class="AboutTileDetail" style="color: #ff0000;">このサイトは総合型選抜で電気通信大学に入学した学生が運営するサイトです。入試関係の情報などは必ず電気通信大学の公式ホームページをご確認ください。</p>
+                <p class="AboutTileDetail" style="color: #ff0000;">
+                    このサイトは総合型選抜で電気通信大学に入学した学生が運営するサイトです。入試関係の情報などは必ず電気通信大学の公式ホームページをご確認ください。</p>
                 <p class="AboutTileDetail">公式ホームページは➔<a href="https://www.uec.ac.jp/">こちら</a></p>
             </div>
             <div>
@@ -54,50 +55,78 @@
             <div id="news-list">
                 <script>
                     fetch('assets/json/news.json')
-                    .then(response => response.json())
-                    .then(data => { const newsList = document.getElementById('news-list');
-                    const displayCount = Math.min(data.length, 5);
-                    for (let i = 0; i < displayCount; i++) {
-                        const newsItem = data[i];
-                        const newsDiv = document.createElement('div');
-                        newsDiv.innerHTML = `
+                        .then(response => response.json())
+                        .then(data => {
+                            const newsList = document.getElementById('news-list');
+                            const displayCount = Math.min(data.length, 5);
+                            for (let i = 0; i < displayCount; i++) {
+                                const newsItem = data[i];
+                                const newsDiv = document.createElement('div');
+                                newsDiv.innerHTML = `
                         <a href="${newsItem.url}"><h3>${newsItem.title}(${newsItem.day})</h3></a>
                         `;
-                        newsList.appendChild(newsDiv);
-                    } })
-                    .catch(error => console.error('Error:', error));
+                                newsList.appendChild(newsDiv);
+                            }
+                        })
+                        .catch(error => console.error('Error:', error));
                 </script>
             </div>
             <h1>入試概要</h1>
-            <p>電気通信大学の総合型選抜は共通テスト+個別試験で行われる国立大学前期入試と異なり、例年、志望理由書や活動実績報告書などを提出する「第一次選考」と、プレゼンテーションなど面接試験を行う「第二次選考」で構成されています。 </p>
+            <p>電気通信大学の総合型選抜は共通テスト+個別試験で行われる国立大学前期入試と異なり、例年、志望理由書や活動実績報告書などを提出する「第一次選考」と、プレゼンテーションなど面接試験を行う「第二次選考」で構成されています。
+            </p>
             <p style="color: #ff0000;">受験をご検討の方は必ず最新の募集要項をご確認ください。</p>
             <h1>総合型選抜について知ろう！</h1>
             <a href="">
                 <div class="linkPop">
-                    <p class="linkPopTitle">➔総合型選抜とは</p>
-                    <p class="linkPopDetail">2025年度募集要項をもとに紹介します</p>
+                    <img src="assets/images/home/info_icon.png">
+                    <div>
+                        <p class="linkPopTitle">➔総合型選抜とは</p>
+                        <p class="linkPopDetail">2025年度募集要項をもとに紹介します</p>
+                    </div>
                 </div>
             </a>
             <a href="">
                 <div class="linkPop">
-                    <p class="linkPopTitle">➔FAQで気になることを確認しよう</p>
-                    <p class="linkPopDetail">よくいただくご質問を掲載しています</p>
+                    <img src="assets/images/home/faq_icon.png">
+                    <div>
+                        <p class="linkPopTitle">➔FAQで気になることを確認しよう</p>
+                        <p class="linkPopDetail">よくいただくご質問を掲載しています</p>
+                    </div>
                 </div>
             </a>
             <a href="">
                 <div class="linkPop">
-                    <p class="linkPopTitle">➔ブログで先輩方の受験エピソードを知ろう</p>
-                    <p class="linkPopDetail">先輩方にインタビューしてブログを作っています</p>
+                    <img src="assets/images/home/blog_icon.png">
+                    <div>
+                        <p class="linkPopTitle">➔ブログで先輩方の受験エピソードを知ろう</p>
+                        <p class="linkPopDetail">先輩方にインタビューしてブログを作っています</p>
+                    </div>
                 </div>
             </a>
             <a href="">
                 <div class="linkPop">
-                    <p class="linkPopTitle">➔わからないことを質問しよう</p>
-                    <p class="linkPopDetail">随時質問を受け付け、解答しています</p>
+                    <img src="assets/images/home/question_icon.png">
+                    <div>
+                        <p class="linkPopTitle">➔わからないことを質問しよう</p>
+                        <p class="linkPopDetail">随時質問を受け付け、解答しています</p>
+                    </div>
                 </div>
             </a>
             <h1>最新のブログ</h1>
-            <h1>お問い合わせ先</h1>
+            <p>最新のブログについての情報はありません</p>
+            <h1>SNSアカウント</h1>
+            <a href="https://x.com/uec_sogou">
+                <div class="snsButton" style="background-color: black;">
+                    <p>👆X(旧Twitter)</p>
+                </div>
+            </a>
+            <p>マシュマロへの質問の返答やその他情報発信に利用しています。</p>
+            <a href="https://marshmallow-qa.com/uec_sogou?utm_">
+                <div class="snsButton" style="background-color: #F3969A;">
+                    <p>👆マシュマロ</p>
+                </div>
+            </a>
+            <p>入試に関する質問を随時受け付け、回答を行っています。。</p>
         </div>
     </div>
 </body>

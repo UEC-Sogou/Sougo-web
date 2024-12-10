@@ -149,6 +149,11 @@ header {
     border: 0.2vw solid #009900;
     border-radius: 1vw;
     margin-bottom: 0.1vw;
+    display: flex;
+}
+
+.linkPop img {
+    width: 5vw;
 }
 
 .mainBlock a{
@@ -170,5 +175,16 @@ header {
     color: #999999;
     font-size: 1.1vw;
     font-weight: 600;
+}
+
+.snsButton {
+    color: #ffffff;
+    display: inline-block;
+    border-radius: 1vw;
+}
+
+.snsButton p{
+    margin: 0;
+    padding: 0.5vw;
 }
 
