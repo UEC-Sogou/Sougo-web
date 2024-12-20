@@ -251,3 +251,37 @@ header {
     font-size: 1.2vw;
     margin-top: 1vw;
 }
+
+
+/* 注意書き 免責 */
+.note {
+    display: flex;
+    align-items: flex-start;
+    background-color: #fff9c4;
+    border-radius: 8px;
+    padding: 8px;
+    margin: 16px 0;
+  }
+  
+  .note-icon {
+    font-size: 2vw;
+    margin-right: 1.5vw;
+    color: #f57c00;
+  }
+  
+  .note-content {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .note-header {
+    font-weight: bold;
+    color: #f57c00;
+    margin-bottom: 0.2vw;
+    font-size: 2vw;
+  }
+  
+  .note-body {
+    font-size: 1.2vw;
+    color: #333;
+  }
