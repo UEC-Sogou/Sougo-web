@@ -64,9 +64,9 @@ header {
     width: 100%;
     height: 25vw;
     object-fit: cover;
-    filter: blur(3px) opacity(80%);
-    margin: -3px;
-    width: calc(100% + 6px); 
+    filter: blur(0.2vw) opacity(80%);
+    margin: -0.21vw;
+    width: calc(100% + 0.3vw); 
 }
 
 .onImgAbout {
@@ -201,9 +201,9 @@ header {
     width: 100%;
     height: 10vw;
     object-fit: cover;
-    filter: brightness(50%) blur(3px);
-    margin: -4px;
-    width: calc(100% + 6px); 
+    filter: brightness(50%) blur(0.2vw);
+    margin: -0.21vw;
+    width: calc(100% + 0.6vw); 
 }
 
 .TopImageOnText {
